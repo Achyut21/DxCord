@@ -1,4 +1,4 @@
-# Dappcord
+# DxCord
 
 ## Technology Stack & Tools
 
