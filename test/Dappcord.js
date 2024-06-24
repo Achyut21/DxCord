@@ -8,12 +8,15 @@ const tokens = (n) => {
 describe("Dappcord", function () {
   
   let Dappcord;
-
+  let deployer, user
   
   const NAME = "Dappcord";
   const SYMBOL = "DC";
   
   beforeEach(async () => {
+
+    [deployer, user] = await ethers.getSigners()
+
     const DappcordFactory = await ethers.getContractFactory("Dappcord");
     Dappcord = await DappcordFactory.deploy(NAME, SYMBOL);
     await Dappcord.deployed();
@@ -29,5 +32,10 @@ describe("Dappcord", function () {
       let result = await Dappcord.symbol();
       expect(result).to.equal(SYMBOL);
     });
+
+    it("Sets the owner", async () => {
+      const result = await Dappcord.owner()
+      expect(result).to.equal(deployer.address)
+    })
   });
 });
