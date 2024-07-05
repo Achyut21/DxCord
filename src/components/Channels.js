@@ -12,8 +12,8 @@ const Channels = ({ provider, account, dappcord, channels, currentChannel, setCu
 
         <ul>
           <li>Channel Alpha</li>
-          <li>Channel 2</li>
-          <li>Channel 3</li>
+          <li>Channel beta</li>
+          <li>Channel gamma</li>
         </ul>
       </div>
     </div>
