@@ -13,7 +13,7 @@ const Messages = ({ account, messages, currentChannel }) => {
   return (
     <div className="text">
       <div className="messages">
-
+        
       </div>
 
 
